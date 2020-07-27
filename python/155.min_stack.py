@@ -9,7 +9,7 @@ class MinStack:
 
 
     def push(self, x: int) -> None:
-        if x < self.min:
+        if x <= self.min:
             self.stack.append(self.min)
             self.min = x
         self.stack.append(x)
