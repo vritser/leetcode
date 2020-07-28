@@ -13,7 +13,6 @@ class Solution:
         depth(root, 1)
         return len(arr)
 
-
     def maxDepthBottomUp(self, root: Node) -> int:
         if not root: return 0
         if not root.children: return 1
