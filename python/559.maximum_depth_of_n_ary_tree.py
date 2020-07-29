@@ -25,6 +25,19 @@ class Solution:
 
         return maxd
 
+    def maxDepthTopDown(self, root: Node) -> int:
+        def depth(root: Node, l: int) -> int:
+            if not root: return 0
+            if not root.children: return l
+
+            maxd = 0
+            for c in root.children:
+                d = depth(c, l + 1)
+                if maxd < d:
+                    maxd = d
+            return maxd
+        return depth(root, 1)
+
 
 
 class Node:
