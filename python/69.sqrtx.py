@@ -5,7 +5,7 @@ class Solution:
 
         l, r = 0, x
         while l < r:
-            m = (r + l) / 2
+            m = int((r + l) / 2)
             # m * m > x, so the square root of x should in l - m
             if (x / m < m):
                 r = m
