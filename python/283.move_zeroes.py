@@ -9,7 +9,7 @@ class Solution:
                 nums[k] = nums[i]
                 k += 1
 
-        for j in rang(k, len(nums)):
+        for j in range(k, len(nums)):
             nums[j] = 0
 
     def moveZeroes2(self, nums: List[int])-> None:
